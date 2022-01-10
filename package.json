@@ -1,0 +1,35 @@
+{
+  "name": "upperspec",
+  "license": "UNLICENSED",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "ts-node-dev src",
+    "compile": "rm -rf dist/ && tsc",
+    "start": "NODE_ENV=production node dist",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lint:js": "eslint --ext \".js,.ts\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "format": "prettier --write --list-different . && yarn lint:js --fix"
+  },
+  "dependencies": {
+    "date-fns": "^2.28.0",
+    "discord.js": "^13.5.1",
+    "dotenv": "^10.0.0",
+    "dpdm": "^3.8.0",
+    "i18n": "^0.13.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@types/i18n": "^0.13.2",
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1",
+    "ts-node-dev": "^1.1.8"
+  }
+}

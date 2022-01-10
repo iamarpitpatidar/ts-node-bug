@@ -1,0 +1,4 @@
+{
+  "*.{js,ts}": "eslint --cache",
+  "*.**": "prettier --check --ignore-unknown"
+}
